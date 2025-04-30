@@ -19,9 +19,15 @@ void main()
 {
     printf("welcome to joyato.");
     
-    int amount,hundred,fifty,twenty,ten,five,two,one;
+    int amount,fivehundred,twohundred,hundred,fifty,twenty,ten,five,two,one;
     printf("\nEnter your amount. :- ");
     scanf("%d",&amount);
+
+    fivehundred=amount / 500;
+    amount=amount - (fivehundred * 500);
+
+    twohundred=amount / 200;
+    amount=amount - (twohundred * 200);
 
     hundred=amount / 100;
     amount=amount - (hundred * 100);
@@ -44,6 +50,8 @@ void main()
     one=amount / 1;
     amount=amount - (one * 1);
 
+    printf("\n ₹500 = %d",fivehundred);
+    printf("\n ₹200 = %d",twohundred);
     printf("\n ₹100 = %d",hundred);
     printf("\n ₹50 = %d",fifty);
     printf("\n ₹20 = %d",twenty);
@@ -51,4 +59,6 @@ void main()
     printf("\n ₹5 = %d",five);
     printf("\n ₹2 = %d",two);
     printf("\n ₹1 = %d",one);
+
+    printf("\nTHANKS FOR USING ME.");
 } 
