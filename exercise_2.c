@@ -10,26 +10,23 @@
 #include<stdio.h>
 void main()
 {
-    int millennium,count;
+    int millennium,year;
 
     printf("welcome to joyato");
     printf("\nLet's know about millennium year.");
 
     printf("\nEnter your current year. :- ");
-    scanf("%d",&count);
+    scanf("%d",&year);
 
-    millennium = count  / 1000;
-
-    if(count<1000)
+    if(year % 100==0)
     {
-        printf("\nEnter a viled year.try again plz.");
+        printf("\nyes,this is millennium year.");
     }
-
-    if(count>1000)
+    
+    if(year % 100!=0)
     {
-        millennium = count / 1000;
-        printf("\nyear = %d",millennium);
+        printf("\nno,this is not millennium year.");
     }
-
+    
     printf("\nGood by....");
 }
