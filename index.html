@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div id="loading-text">Loading...</div>
+        <div id="progress-bar-container">
+            <div id="progress-bar-fill"></div>
+        </div>
+        <div id="loading-status">check your internet...</div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="hidden">
+        <h1>
+            Welcome<br>
+            To<br>
+            Quiz
+        </h1>
+        <p id="welcome-sentence">Knowledge is power.</p>
+        <div class="play-button-container">
+            <a href="quiz.html" id="play-link">
+                <span id="play-button">▶️</span>
+                <p>Play</p>
+            </a>
+        </div>
+        <div id="ad-container-welcome">
+            <!-- Welcome Page Ad -->
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '11387751257b473b596aebcd58fb4e62',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/11387751257b473b596aebcd58fb4e62/invoke.js"></script>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // --- Loading Screen Logic ---
+        const loadingScreen = document.getElementById('loading-screen');
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const progressBarFill = document.getElementById('progress-bar-fill');
+        const loadingStatus = document.getElementById('loading-status');
+        const welcomeSentence = document.getElementById('welcome-sentence');
+
+        // Simulate loading
+        setTimeout(() => {
+            progressBarFill.style.width = '37.5%'; // 3/8
+            loadingStatus.textContent = 'requirements load...';
+        }, 3000);
+
+        setTimeout(() => {
+            progressBarFill.style.width = '75%'; // 6/8
+            loadingStatus.textContent = "let's play QUIZ...";
+        }, 6000);
+
+        setTimeout(() => {
+            progressBarFill.style.width = '100%';
+            loadingScreen.classList.add('hidden');
+            welcomeScreen.classList.remove('hidden');
+
+            // Start welcome sentence cycling
+            const sentences = [
+                "Knowledge is power.",
+                "Let's play quiz.",
+                "Mind power.",
+                "Question is all answers about this world."
+            ];
+            let sentenceIndex = 0;
+            setInterval(() => {
+                sentenceIndex = (sentenceIndex + 1) % sentences.length;
+                welcomeSentence.textContent = sentences[sentenceIndex];
+            }, 5000); // Change every 5 seconds
+
+        }, 8000); // Total 8 seconds loading
+
+    </script>
+</body>
+</html>
