@@ -37,8 +37,8 @@ void main()
     }
     else
     {
-        printf("\n1st cylinder's area. :-%d",area1);
-        printf("\n2nd cylinder's area. :-%d",area2);
+        printf("\n1st cylinder's area. : %d",area1);
+        printf("\n2nd cylinder's area. : %d",area2);
         printf("\ncylinder 1st is bigger than cylinder.");
         printf("\ncylinder 2nd < cylinder 1st");
     }
