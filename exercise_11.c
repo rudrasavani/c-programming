@@ -1,32 +1,30 @@
 /*
-    1 4 9 16 25  ...... 1000
-    
-    1) creat variable.
-    2)creat logic for looping.
-    3)giving variables value 1.
-      print 1
-      number = number * number //4
-      print 4
-      number = number * number //9
-      print 9 
-      number = number * number //16
+    0,1,1,2,3,5,8,13,21,34.....
+
+    steps
+    1) creat 2 variables.
+    2) 1st variables is 0 and 2nd is 1.
+    3) creat logic for counting.
+    4)display all value.
 */
+
 #include<stdio.h>
 void main()
 {
     printf("WELCOME TO JOYATO.\n");
-    
-    int number=1;
-    
-    printf("%d ",number);
-    
-    number = number + 1;
-    
-    while(number<=100)
+
+    int a=0,b=1,c;
+
+    printf("%d %d ",a,b);
+
+    c = a+b;
+    printf("%d ",c);
+
+    while(c<=100)
     {
-        number = number * number;
-        printf("%d ",number);
+    a =b;
+    b=c;
+    c = a+b;
+    printf("%d ",c);
     }
-    
-    printf("\ngood bye...");
 }
