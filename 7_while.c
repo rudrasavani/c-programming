@@ -15,6 +15,8 @@
         interest (121) = (amount * rate * 1) /100
         amount (1331) = amount + interest
 
+    next programming is=write a program to findout given number is prime number or not.
+
 */
 
 #include<stdio.h>
