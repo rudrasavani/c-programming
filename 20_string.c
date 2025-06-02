@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 void main() {
-    char string[100];  // 100 characters tak input le sakta hai
+    char string[100];  
     int i = 0;
 
     printf("Enter your name. :- ");
-    gets(string);  // User se input lena (Note: gets() is unsafe, but okay for beginner practice)
+    gets(string);  
 
     // Characters count karna
     while (string[i] != '\0') {
